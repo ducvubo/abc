@@ -1,0 +1,49 @@
+.item1 {
+    height         : 100%;
+    display        : flex;
+    justify-content: space-between;
+    padding        : 5px 170px;
+    border-bottom  : 1px solid #ccc;
+
+    .sdt {
+        color      : #696363;
+        text-shadow: 0 1px 0 #FFF;
+        font-size  : 15px;
+    }
+
+    .tk-gh-tt {
+        display    : flex;
+        color      : #696363;
+        text-shadow: 0 1px 0 #FFF;
+        font-size  : 15px;
+
+        .icon {
+            margin: 0 3px;
+            cursor: pointer;
+
+            span {
+                margin: 0 2px;
+            }
+        }
+    }
+}
+
+.item2 {
+    border         : 1px solid black;
+    height         : auto;
+    width          : auto;
+    display        : flex;
+    justify-content: space-between;
+    padding        : 0 176px;
+
+    .fb-tw-in {
+        display: flex;
+        gap    : 15px;
+        margin : auto;
+
+    }
+
+    .logo {
+        
+    }
+}

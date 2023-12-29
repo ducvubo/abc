@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import { connect } from "react-redux";
+import { Route, Switch } from "react-router-dom";
+import { Router } from "react-router";
+import Home from "./homepage/Home";
+import About from "./homepage/About";
+import { createBrowserHistory } from "history";
+import testrouter from "./homepage/testrouter";
+import HeaderMenu from "./Admin/menu/HeaderMenu";
+import trangChu from "./homepage/trangChu";
+const history = createBrowserHistory();
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Router history={history}>
+        <Switch>
+          {/* <Route path="/" exact><Home/></Route> */}
+          <Route path={"/"} exact component={trangChu}/>
+          <Route path={"/about/"} exact component={About}/>
+          <Route path={"/header"} exact component={HeaderMenu}/>
+          <Route path={"/header/khachhang"} exact component={testrouter}/>
+
+        </Switch>
+        </Router>
+      </React.Fragment>
+    );
+  }
 }
+const mapStateToProps = (state) => {
+  return {};
+};
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
