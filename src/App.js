@@ -8,6 +8,8 @@ import { createBrowserHistory } from "history";
 import testrouter from "./homepage/testrouter";
 import HeaderMenu from "./Admin/menu/HeaderMenu";
 import trangChu from "./homepage/trangChu";
+import { hover } from "@testing-library/user-event/dist/hover";
+import QuanLyNguoiDung from "./quanly/chucuahang/QuanLyNguoiDung";
 const history = createBrowserHistory();
 
 class App extends Component {
@@ -18,9 +20,9 @@ class App extends Component {
         <Switch>
           {/* <Route path="/" exact><Home/></Route> */}
           <Route path={"/"} exact component={trangChu}/>
-          <Route path={"/about/"} exact component={About}/>
-          <Route path={"/header"} exact component={HeaderMenu}/>
-          <Route path={"/header/khachhang"} exact component={testrouter}/>
+          <Route path={"/quanly"} exact component={HeaderMenu}/>
+          <Route path={"/quanly/quanlynguoidung"} exact component={QuanLyNguoiDung}/>
+
 
         </Switch>
         </Router>

@@ -2,11 +2,10 @@ import actionTypes from "../action/actionTypes";
 
 const INITIAL_STATE = {
   count: 0,
-  ngonngu:''
 };
 
-const reducer = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
+const reducer = (state = INITIAL_STATE, actions) => {
+  switch (actions.type) {
     case actionTypes.INCREMENT:
       return {
         ...state,
@@ -19,10 +18,9 @@ const reducer = (state = INITIAL_STATE, action) => {
         count: state.count - 1,
       };
     case actionTypes.DOI_NGON_NGU:
-      console.log("check: ",action.ngonngu)
       return {
         ...state,
-        ngonngu: action.ngonngu
+        ngonngu:actions.ngonngu
       };
     default:
       return state;

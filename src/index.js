@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { IntlProvider } from "react-intl";
-import InltProviderWrapper from "./InltProviderWrapper";
+import DoiNgonNgu from "./DoiNgonNgu";
 import "@formatjs/intl-pluralrules/polyfill";
 import "@formatjs/intl-pluralrules/locale-data/en";
 import "@formatjs/intl-pluralrules/locale-data/vi";
@@ -21,9 +21,9 @@ import "@formatjs/intl-relativetimeformat/locale-data/vi";
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <InltProviderWrapper>
+      <DoiNgonNgu>
         <App />
-      </InltProviderWrapper>
+      </DoiNgonNgu>
     </React.StrictMode>
   </Provider>,
   document.getElementById("root")

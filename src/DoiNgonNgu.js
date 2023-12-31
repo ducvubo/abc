@@ -15,14 +15,17 @@ import en from "./transalate/en.json";
 // const locale = vi;
 // const messages = vi;
 
-const locale = this.props.ngongu;
-const messages = this.props.ngongu;
+// const locale = this.props.ngongu;
+// const messages = this.props.ngongu;
 
-class IntlProviderWrapper extends Component {
+class DoiNgonNgu extends Component {
   render() {
-    console.log(this.props.ngongu)
+    let ngonngu = this.props.ngonngu;
+    let locale = ngonngu === "en" ? en : vi;
+    let messages = ngonngu === "en" ? en : vi;
+    console.log(this.props.ngonngu);
     return (
-      <IntlProvider locale={locale} messages={messages} defaultLocale={vi}>
+      <IntlProvider locale={locale} messages={messages} defaultLocale="vi">
         {this.props.children}
       </IntlProvider>
     );
@@ -31,8 +34,8 @@ class IntlProviderWrapper extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    ngongu:state.counter.ngongu
+    ngonngu: state.counter.ngonngu,
   };
 };
 
-export default connect(mapStateToProps, null)(IntlProviderWrapper);
+export default connect(mapStateToProps, null)(DoiNgonNgu);

@@ -9,8 +9,7 @@ class NavigationTest extends Component {
   render() {
     let { menu } = this.props;
     return (
-      <div class="header-container">
-        <div className="header-tabs-container">
+        <>
           <ul className="navigator-menu list-unstyled">
             {menu.map((menuGroup, index) => (
               <li key={index} className="menu-group">
@@ -29,8 +28,7 @@ class NavigationTest extends Component {
               </li>
             ))}
           </ul>
-        </div>
-      </div>
+        </>
     );
   }
 }

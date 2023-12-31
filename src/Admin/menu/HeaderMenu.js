@@ -21,10 +21,11 @@ class HeaderMenu extends Component {
       menuApp: menu,
     });
   }
-  doiNgonNgu = (ngongu) => {
-    this.props.doiNgonNgu(ngongu)
+  doiNgonNgu = (ngonngu) => {
+    this.props.doiNgonNgu(ngonngu)
   };
   render() {
+    console.log("check menu: ",menu)
     return (
       <div className="header-container">
         <div className="header-tabs-container">
@@ -54,7 +55,7 @@ class HeaderMenu extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    ngongu:state.counter.ngongu
+    ngonngu:state.counter.ngongu
   };
 };
 
